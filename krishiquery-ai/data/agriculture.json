@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "crop": "tomato",
+    "title": "Tomato Leaf Curl Virus (ToLCV) Diagnosis and Management",
+    "content": "Tomato leaf curl virus causes severe upward and downward leaf curling, crinkling, puckering, vein thickening, and stunted bushy growth. It is caused by Begomovirus transmitted by silverleaf whitefly (Bemisia tabaci). Management includes using yellow sticky traps (15-20 per hectare) to monitor and catch whiteflies, planting border rows of maize or barrier crops, rogueing infected plants early, and applying neem-based foliar sprays (azadirachtin) or recommended systemic bio-pesticides."
+  },
+  {
+    "id": 2,
+    "crop": "tomato",
+    "title": "Tomato Early Blight and Fungal Leaf Spot Control",
+    "content": "Early blight caused by Alternaria solani produces brown to black spots with concentric rings resembling a target board, primarily on older lower leaves. Surrounding tissue turns yellow, causing premature leaf drop. Control measures include crop rotation with non-solanaceous crops, wider plant spacing for aeration, drip irrigation to prevent wet foliage, mulching to prevent soil splash, and timely application of copper oxychloride or mancozeb as preventive sprays."
+  },
+  {
+    "id": 3,
+    "crop": "tomato",
+    "title": "Tomato Blossom End Rot and Calcium Deficiency",
+    "content": "Blossom end rot is a physiological disorder characterized by water-soaked, sunken, dark leathery lesions at the blossom end of tomato fruits. It is caused by localized calcium deficiency during rapid fruit development, typically aggravated by fluctuating soil moisture, irregular watering, and high soil salinity. To manage, ensure uniform irrigation scheduling, avoid drought stress, apply agricultural gypsum or lime before planting, and apply foliar sprays of calcium chloride or calcium nitrate."
+  },
+  {
+    "id": 4,
+    "crop": "tomato",
+    "title": "Tomato Nitrogen Deficiency and Yellow Leaves Management",
+    "content": "Nitrogen deficiency in tomato plants causes uniform chlorosis where older leaves turn light green to pale yellow first, accompanied by slender stunted stems and reduced fruit set. In severe cases, the entire plant turns pale yellow. Management requires applying well-decomposed farmyard manure, balanced NPK basal fertilization (100:60:60 kg/ha), split top-dressing of urea or ammonium sulfate at vegetative and flowering stages, or foliar application of 1% water-soluble urea."
+  },
+  {
+    "id": 5,
+    "crop": "tomato",
+    "title": "Tomato Bacterial Wilt Prevention and Soil Health",
+    "content": "Bacterial wilt caused by Ralstonia solanacearum causes rapid, daytime wilting and drooping of leaves while still retaining green color, followed by total plant collapse. Vascular bundles show dark brown discoloration and release white milky bacterial streaming when cut stems are placed in water. Management involves using resistant cultivars (like Arka Ananya, BWR-5), deep summer ploughing, soil solarization, maintaining proper drainage, and avoiding transplanting in infested fields."
+  },
+  {
+    "id": 6,
+    "crop": "tomato",
+    "title": "Tomato Irrigation Scheduling and Fruit Cracking Prevention",
+    "content": "Fruit cracking and splitting in tomatoes occur when dry soil periods are followed by heavy irrigation or unseasonal rainfall, leading to rapid water absorption and internal fruit expansion that bursts the cuticle. Management includes installing drip irrigation systems for consistent moisture delivery, applying organic straw mulches to conserve soil moisture, and harvesting fruit before heavy rain events."
+  },
+  {
+    "id": 7,
+    "crop": "rice",
+    "title": "Rice Yellow Stem Borer Identification and Management",
+    "content": "Yellow stem borer (Scirpophaga incertulas) is a serious pest of paddy. Larvae bore into the central stem; feeding during the vegetative stage causes drying of the central shoot known as 'dead heart', while damage during the reproductive stage causes empty whitish panicles known as 'white ear head'. Management includes clipping seedling leaf tips before transplanting to remove egg masses, installing pheromone traps at 8 per hectare, and conserving natural predators such as spiders and egg parasitoids."
+  },
+  {
+    "id": 8,
+    "crop": "rice",
+    "title": "Rice Leaves Yellowing: Zinc Deficiency (Khaira Disease)",
+    "content": "Zinc deficiency, known as Khaira disease in paddy, appears 2 to 3 weeks after transplanting. The midribs of younger leaves turn yellow/chlorotic, followed by small reddish-brown or bronze necrotic spots that coalesce across the leaf blade, giving leaves an orange-brown appearance and causing stunted plant tillering. Management requires basal soil application of zinc sulfate (25 kg/ha) or foliar spraying with 0.5% zinc sulfate combined with 0.25% slaked lime."
+  },
+  {
+    "id": 9,
+    "crop": "rice",
+    "title": "Rice Bacterial Leaf Blight Symptoms and Cultural Control",
+    "content": "Bacterial leaf blight (Xanthomonas oryzae) manifests as water-soaked lesions starting from leaf tips and margins, progressing down the blade with wavy undulating borders. Lesions turn greenish-yellow, then straw-colored. In humid mornings, milky bacterial ooze droplets form on diseased leaf surfaces. Management involves avoiding excess nitrogen fertilizers, ensuring proper field drainage, using certified disease-free seeds, and soaking seeds in hot water or bio-control agents."
+  },
+  {
+    "id": 10,
+    "crop": "rice",
+    "title": "Rice Blast Disease Symptoms, Prevention and Fungicidal Management",
+    "content": "Rice blast (Magnaporthe oryzae) attacks leaves, nodes, and panicle necks. Leaf blast produces spindle-shaped or diamond-shaped lesions with greyish-white centres and dark brown or reddish borders. Neck blast causes brown to black lesions at the panicle base, leading to broken necks and unfilled grains. Management includes balanced nitrogen application with split doses, potassium fertilization, avoiding excessive standing water, and spraying tricyclazole or validamycin."
+  },
+  {
+    "id": 11,
+    "crop": "rice",
+    "title": "Rice Fertilizer Application and Nitrogen Schedule",
+    "content": "Optimal fertilization for wetland rice involves applying balanced NPK (120:60:40 kg/ha). Nitrogen should be split into three equal applications: 1/3 as basal before transplanting, 1/3 at maximum tillering stage (20-25 days after transplanting), and 1/3 at panicle initiation stage. Apply all phosphorus as basal and potassium in two split doses. Use leaf color charts (LCC) to guide nitrogen top-dressing to prevent lodging and disease susceptibility."
+  },
+  {
+    "id": 12,
+    "crop": "rice",
+    "title": "Rice Brown Planthopper (BPH) Outbreak Prevention",
+    "content": "Brown planthopper (Nilaparvata lugens) adults and nymphs congregate at the base of rice tillers and suck plant sap. Severe feeding turns the crops yellow-orange, which quickly dries up into circular patches of scorched plants termed 'hopper burn'. Management: adopt alternate wetting and drying (AWD) irrigation to deprive BPH of moist microclimate, avoid broad-spectrum pyrethroid insecticides, maintain 30 cm alleyways every 2 meters, and conserve mirid bugs."
+  },
+  {
+    "id": 13,
+    "crop": "cotton",
+    "title": "Cotton Leaf Curl Virus (CLCuV) Symptoms and Vector Control",
+    "content": "Cotton leaf curl virus is characterized by upward and downward leaf curling, severe vein thickening, enations (small leaf-like outgrowths on the underside of leaves), and extreme plant stunting with poor boll formation. The virus is transmitted by the whitefly (Bemisia tabaci). Management relies on growing resistant varieties, eradicating alternate weed hosts (like Abutilon indicum), destroying infected crop residue, and managing whiteflies using yellow sticky traps and neem oil."
+  },
+  {
+    "id": 14,
+    "crop": "cotton",
+    "title": "Cotton Whitefly Pest Management and Sooty Mold Control",
+    "content": "Whitefly (Bemisia tabaci) is a major sucking pest of cotton. Both nymphs and adults suck sap from the undersurface of cotton leaves, causing leaf chlorosis, curling, and premature dropping. They excrete sticky honeydew, which promotes black sooty mold fungus on leaves and open bolls, reducing lint quality and photosynthesis. Management: erect yellow sticky cards (10-15/acre), avoid excess nitrogen, spray 5% neem seed kernel extract (NSKE), or use spiromesifen/diafenthiuron at economic threshold level."
+  },
+  {
+    "id": 15,
+    "crop": "cotton",
+    "title": "Cotton Pink Bollworm (PBW) Monitoring and Control",
+    "content": "Pink bollworm (Pectinophora gossypiella) larvae bore into flower buds and developing bolls. Infested flower petals twist together into a characteristic 'rosette flower'. Larvae feed on developing seeds and stain the lint, causing premature boll opening and locule destruction. Management includes deploying pheromone traps (8/ha) for moth monitoring, timely termination of the crop by January, handpicking rosette flowers, and shredding post-harvest stalks."
+  },
+  {
+    "id": 16,
+    "crop": "cotton",
+    "title": "Cotton Leaf Reddening and Potassium Deficiency",
+    "content": "Leaf reddening and potassium deficiency in cotton occurs during heavy boll load. Lower and middle leaves exhibit interveinal chlorosis followed by reddening, curling of leaf margins downwards, and necrosis. Drought stress, waterlogging, or low soil potassium exacerbate symptoms. Management involves applying basal potash (muriate of potash 60 kg/ha) and foliar spraying with 1-2% potassium nitrate (KNO3) or magnesium sulfate during peak boll development."
+  },
+  {
+    "id": 17,
+    "crop": "cotton",
+    "title": "Cotton Sucking Pests: Aphids, Jassids, and Thrips Control",
+    "content": "Early season sucking pests in cotton include leafhoppers (jassids), aphids, and thrips. Jassids cause downward cupping of leaves with marginal yellowing ('hopper burn'); thrips cause upward leaf curling and silvery streaks on lower leaf surfaces; aphids cause crinkled leaves and honeydew deposition. Management: seed treatment with imidacloprid/thiamethoxam, planting cowpea border rows, yellow sticky traps, and foliar spray of neem oil."
+  },
+  {
+    "id": 18,
+    "crop": "chilli",
+    "title": "Chilli Leaf Curl Virus (Murda Complex) and Vector Control",
+    "content": "Chilli leaf curl (Murda complex) is caused by Gemini virus transmitted by whiteflies and aggravated by thrips and broad mites. Leaves become severely reduced in size ('little leaf' / leaves getting small), curled, puckered, with shortened internodes and bunchy top appearance, resulting in total flower and fruit drop. Management: use virus-tolerant hybrids, install silver reflective plastic mulch to repel vectors, spray neem oil 0.3%, and practice barrier cropping with maize or sorghum."
+  },
+  {
+    "id": 19,
+    "crop": "chilli",
+    "title": "Chilli Thrips (Scirtothrips dorsalis) and Upward Leaf Curling",
+    "content": "Chilli thrips suck sap from tender shoots, flower buds, and leaf surfaces, causing characteristic upward curling of leaves in a boat shape. The leaf undersides show bronze or brownish rough scabby patches, and flower buds become brittle and drop. Management: install blue sticky traps (20 per acre), maintain field sanitation, spray neem seed kernel extract (NSKE 5%), or apply spinosad/fipronil when infestation exceeds threshold."
+  },
+  {
+    "id": 20,
+    "crop": "chilli",
+    "title": "Chilli Broad Mites and Downward Leaf Curling",
+    "content": "Chilli broad mites (Polyphagotarsonemus latus) attack the growing tips and underside of young leaves, causing dramatic downward curling (inverted boat shape). Infested leaves become thick, brittle, elongated with oily appearances, and petioles become elongated ('rat-tail' symptom). Management: avoid hot dry microclimates, spray wettable sulfur (3 g/L) or acaricides like abamectin or fenpyroximate thoroughly covering leaf undersides."
+  },
+  {
+    "id": 21,
+    "crop": "chilli",
+    "title": "Chilli Anthracnose and Fruit Rot (Die-Back) Management",
+    "content": "Anthracnose caused by Colletotrichum capsici affects mature ripe chilli fruits and branches. On fruits, small circular sunken spots appear with concentric rings of dark acervuli, leading to fruit shriveling and seed discoloration. On twigs, it causes die-back from tip downward. Management: treat seeds with Trichoderma harzianum, remove and destroy diseased fruits, practice 2-year crop rotation, and apply mancozeb or azoxystrobin at early symptom onset."
+  },
+  {
+    "id": 22,
+    "crop": "chilli",
+    "title": "Chilli Flower Drop and Micronutrient Deficiency Management",
+    "content": "Excessive flower and young fruit dropping in chilli is triggered by high temperature stress, improper soil moisture, and boron or zinc deficiency. Deficiencies lead to poor pollen viability and stunted small leaves. Management: apply 10-15 kg/ha borax to soil before planting, spray foliar micronutrient mixture (zinc + boron + iron) at early flowering, and spray naphthalene acetic acid (NAA 10 ppm) to prevent flower shedding."
+  },
+  {
+    "id": 23,
+    "crop": "maize",
+    "title": "Maize Fall Armyworm (FAW) Identification and IPM Control",
+    "content": "Fall armyworm (Spodoptera frugiperda) is a devastating caterpillar pest in corn/maize. Early instar larvae scrape leaf tissues causing window pane damage; later instars feed inside whorls causing ragged leaves, skeletonized holes, and massive sawdust-like fecal frass accumulation. Management: deep summer ploughing, intercropping with pulses, deploying pheromone traps (5/acre), handpicking egg masses, applying neem cake or fine sand/ash into whorls, and spraying Bacillus thuringiensis or chlorantraniliprole."
+  },
+  {
+    "id": 24,
+    "crop": "maize",
+    "title": "Maize Zinc Deficiency (White Bud Disease)",
+    "content": "Zinc deficiency in maize, commonly known as 'White Bud', causes prominent broad bleached white or pale yellow bands between the leaf midrib and margins emerging from the whorl. The leaf margins and tips remain green while internal tissue becomes chlorotic or necrotic, accompanied by shortened internodes. Management: broadcast zinc sulfate (25 kg/ha) at field preparation, or apply foliar spray of 0.5% zinc sulfate with 0.25% lime during vegetative stage."
+  },
+  {
+    "id": 25,
+    "crop": "maize",
+    "title": "Maize Leaves Yellowing and Nitrogen Fertilizer Management",
+    "content": "Nitrogen deficiency in maize shows up as characteristic V-shaped chlorosis/yellowing that begins at the tip of the oldest leaves and advances down the central midrib. The margins stay green longest before turning brown. To manage: apply recommended NPK (120:60:40 kg/ha); split nitrogen into 3 doses (25% at sowing, 50% at knee-high stage 30-35 DAS, and 25% at tasseling/silking stage) to optimize kernel filling and avoid leaf yellowing."
+  },
+  {
+    "id": 26,
+    "crop": "maize",
+    "title": "Maize Turcicum Leaf Blight Symptoms and Management",
+    "content": "Turcicum leaf blight (Exserohilum turcicum) produces long, elliptical, grayish-green to tan necrotic lesions (2.5 to 15 cm long) on lower maize leaves, which spread upwards. In humid weather, lesions coalesce, giving the entire foliage a burnt or parched appearance. Management includes planting resistant corn hybrids, removing diseased plant residues, crop rotation with soybean, and applying preventive mancozeb sprays."
+  },
+  {
+    "id": 27,
+    "crop": "maize",
+    "title": "Maize Stem Borer (Chilo partellus) Management",
+    "content": "Maize stem borer attacks young plants from 2 weeks after germination. Caterpillars feed on leaves creating uniform pinholes or 'shot-hole' patterns; then bore into the central whorl producing 'dead heart'. Older caterpillars bore inside stems, weakening the stalk and causing lodging. Management: destroy stubbles after harvest, sow early to escape infestation, release Trichoderma chilonis egg parasitoids, and apply carbofuran granules or neem granules into central whorls."
+  },
+  {
+    "id": 28,
+    "crop": "groundnut",
+    "title": "Groundnut Tikka Leaf Spot (Cercospora) Disease Control",
+    "content": "Tikka disease is the most destructive foliar fungal disease of peanut/groundnut. Early leaf spot causes circular reddish-brown spots with prominent bright yellow halos; late leaf spot produces darker nearly black circular spots without halos on lower leaf surfaces. Severe attack leads to complete defoliation. Management: seed treatment with Trichoderma viride or thiram, deep summer ploughing, and foliar sprays of carbendazim (0.1%) plus mancozeb (0.2%) at 35 and 50 days after sowing."
+  },
+  {
+    "id": 29,
+    "crop": "groundnut",
+    "title": "Groundnut Collar Rot and Stem Rot Management",
+    "content": "Collar rot (Aspergillus niger) and stem rot (Sclerotium rolfsii) attack groundnut seedlings and adult plants. Seedlings rot at the collar region near the soil line with black or white fungal cottony growth, leading to sudden wilting and death. Management includes treating seeds with Trichoderma harzianum (10 g/kg seed) or captan, shallow sowing, avoiding un-decomposed manure, and practicing crop rotation with maize or sorghum."
+  },
+  {
+    "id": 30,
+    "crop": "groundnut",
+    "title": "Groundnut Iron Chlorosis and Micronutrient Deficiency",
+    "content": "Iron chlorosis frequently affects groundnut grown in black calcareous or alkaline soils. Young apical leaves turn bright yellow or ivory-white while leaf veins remain faint green. Under severe deficiency, entire leaves bleach white and dry up, stunting peg formation. Management: apply gypsum (400-500 kg/ha) at flowering, and apply foliar spray of 0.5% ferrous sulfate mixed with 0.1% citric acid twice at 10-14 day intervals."
+  }
+]

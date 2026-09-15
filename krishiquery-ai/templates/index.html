@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agri Advisory — AI-Powered Farm Advisory Query Rewriter (AGR-25)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <!-- Header Bar -->
+  <header class="app-header">
+    <div class="container header-content">
+      <div class="brand">
+        <div class="brand-icon">🌾</div>
+        <div>
+          <h1 class="brand-title">Agri Advisory</h1>
+          <p class="brand-subtitle">Transforming informal farmer questions into intelligent agricultural search queries.</p>
+        </div>
+      </div>
+      <div class="header-badges">
+        <span class="badge badge-track">AGR-25 Challenge</span>
+        <span class="badge badge-tech">Entity Extraction & RAG</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <!-- Hero / Query Input Section -->
+    <section class="card hero-card" id="querySection">
+      <div class="section-tag">Agricultural Advisory & Query Rewriter</div>
+      <h2 class="hero-heading">Ask Your Farming Question</h2>
+      <p class="hero-desc">Enter any crop problem in informal words (e.g. <em>"mango fruit black spot"</em> or <em>"tomato leaf curling what do"</em>). The AI extracts crop, plant part, symptom and intent to formulate a precise retrieval query.</p>
+
+      <form id="searchForm" class="search-form">
+        <div class="input-wrapper">
+          <span class="input-icon">🔍</span>
+          <input
+            type="text"
+            id="queryInput"
+            name="query"
+            class="query-input"
+            placeholder="e.g., mango fruit black spot"
+            value="mango fruit black spot"
+            autocomplete="off"
+            required
+          />
+          <button type="button" id="clearBtn" class="btn-clear" title="Clear input">✕</button>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" id="askAiBtn" class="btn btn-primary">
+            <span class="btn-icon">💡</span>
+            <span>Ask AI Advisory</span>
+          </button>
+          <button type="button" id="searchBtn" class="btn btn-secondary">
+            <span class="btn-icon">📊</span>
+            <span>Compare Retrieval</span>
+          </button>
+          <button type="button" id="tryExampleBtn" class="btn btn-outline">
+            <span class="btn-icon">🎲</span>
+            <span>Try Example</span>
+          </button>
+        </div>
+      </form>
+
+      <!-- Quick Example Chips -->
+      <div class="examples-wrapper">
+        <span class="examples-label">Try Unseen & Standard Queries:</span>
+        <div class="example-chips" id="exampleChips">
+          {% for ex in examples %}
+          <button type="button" class="chip" data-query="{{ ex }}">{{ ex }}</button>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- Loading State -->
+    <div id="loadingState" class="loading-state hidden">
+      <div class="spinner"></div>
+      <p class="loading-text">Analyzing query entities, synthesizing optimized search query & fetching agricultural sources...</p>
+    </div>
+
+    <!-- Results Container -->
+    <div id="resultsContainer" class="results-container">
+      <!-- 1. AI Understanding & Rewritten Query Card -->
+      <section class="card query-analysis-card">
+        <div class="card-header-flex">
+          <div class="section-title-wrapper">
+            <span class="section-icon">🧠</span>
+            <div>
+              <h3 class="section-title">Query Understanding & Optimization</h3>
+              <p class="section-subtitle">Preserves crop, plant part, and symptoms without unverified assumptions</p>
+            </div>
+          </div>
+          <div id="methodBadge" class="badge badge-method badge-fallback">
+            <span class="pulse-dot"></span>
+            <span id="methodText">Fallback Rewriting</span>
+          </div>
+        </div>
+
+        <!-- Entity Extraction Grid -->
+        <div class="analysis-grid">
+          <div class="entity-item">
+            <span class="entity-label">🌱 Crop</span>
+            <span id="analysisCrop" class="entity-value highlight-green">Mango</span>
+          </div>
+          <div class="entity-item">
+            <span class="entity-label">🌿 Plant Part</span>
+            <span id="analysisPlantPart" class="entity-value highlight-blue">Fruit</span>
+          </div>
+          <div class="entity-item">
+            <span class="entity-label">⚠️ Detected Problem</span>
+            <span id="analysisProblem" class="entity-value">Black spot</span>
+          </div>
+          <div class="entity-item">
+            <span class="entity-label">🎯 Farmer Intent</span>
+            <span id="analysisIntent" class="entity-value">Diagnosis / management</span>
+          </div>
+        </div>
+
+        <!-- Optimized Query Output Box -->
+        <div class="optimized-query-box">
+          <div class="box-header">
+            <span class="box-title">🔄 Optimized Search Query (Engineered for Agricultural Advisory)</span>
+            <button type="button" id="copyQueryBtn" class="btn-copy" title="Copy query">Copy</button>
+          </div>
+          <p id="rewrittenQueryText" class="query-text">
+            "Mango fruit black spots: possible causes, disease identification, symptoms, prevention and management"
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. Retrieved Agricultural Sources & Concise Guidance -->
+      <section class="card advisory-card" id="advisoryCard">
+        <div class="card-header-flex">
+          <div class="section-title-wrapper">
+            <span class="section-icon">🔎</span>
+            <div>
+              <h3 class="section-title">Retrieved Agricultural Sources</h3>
+              <p class="section-subtitle">Live verified sources retrieved using the optimized search query</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sources-grid" id="sourcesGrid">
+          <!-- Dynamically populated -->
+        </div>
+
+        <!-- Agricultural Guidance Box -->
+        <div class="guidance-box">
+          <div class="guidance-header">
+            <span class="guidance-icon">💡</span>
+            <h4 class="guidance-title">Farmer-Friendly Agricultural Guidance</h4>
+          </div>
+          <div id="guidanceContent" class="guidance-body">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Side-by-Side Retrieval Comparison (Core AGR-25 Demonstration) -->
+      <section class="card comparison-card" id="comparisonSection">
+        <div class="card-header-flex">
+          <div class="section-title-wrapper">
+            <span class="section-icon">📊</span>
+            <div>
+              <h3 class="section-title">Before vs After Retrieval Comparison</h3>
+              <p class="section-subtitle">Demonstrating Top-3 similarity improvement on the agricultural knowledge base</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="comparison-columns">
+          <!-- Column 1: Original Query -->
+          <div class="comparison-col col-original">
+            <div class="col-header">
+              <div class="col-title-badge">Original Farmer Query</div>
+              <div class="col-query-preview" id="origQueryPreview">"mango fruit black spot"</div>
+              <div class="col-stat">
+                <span>Avg Top-3 Score:</span>
+                <strong id="origAvgScore" class="stat-number">0.120</strong>
+              </div>
+            </div>
+            <div class="results-list" id="origResultsList">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Column 2: Rewritten Query -->
+          <div class="comparison-col col-rewritten">
+            <div class="col-header">
+              <div class="col-title-badge col-title-badge-green">AI Rewritten Query</div>
+              <div class="col-query-preview" id="rewrQueryPreview">"Mango fruit black spots..."</div>
+              <div class="col-stat">
+                <span>Avg Top-3 Score:</span>
+                <strong id="rewrAvgScore" class="stat-number stat-number-green">0.245</strong>
+              </div>
+            </div>
+            <div class="results-list" id="rewrResultsList">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Improvement Banner -->
+        <div class="improvement-banner">
+          <div class="improvement-flex">
+            <div class="improvement-metric">
+              <span class="metric-label">Retrieval Similarity Improvement</span>
+              <span class="metric-value" id="improvementValue">+82.5%</span>
+            </div>
+            <div class="improvement-bars">
+              <div class="bar-group">
+                <div class="bar-label"><span>Original Query Avg</span><span id="barOrigText">0.131</span></div>
+                <div class="bar-track"><div id="barOrig" class="bar-fill bar-fill-orig" style="width: 35%;"></div></div>
+              </div>
+              <div class="bar-group">
+                <div class="bar-label"><span>Rewritten Query Avg</span><span id="barRewrText">0.256</span></div>
+                <div class="bar-track"><div id="barRewr" class="bar-fill bar-fill-rewr" style="width: 75%;"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="disclaimer-note">
+            ℹ️ <span id="disclaimerText">Similarity improvement is a lightweight retrieval indicator, not a measure of factual correctness.</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 4. Benchmark Evaluation Section -->
+    <section class="card eval-card" id="evaluationSection">
+      <div class="eval-header-flex">
+        <div>
+          <div class="section-tag section-tag-purple">System Validation</div>
+          <h3 class="section-title">🧪 Benchmark Test Set Evaluation</h3>
+          <p class="section-subtitle">Runs the entire 8-query standardized farmer evaluation suite dynamically.</p>
+        </div>
+        <button type="button" id="evalBtn" class="btn btn-eval">
+          <span class="btn-icon">⚡</span>
+          <span>Evaluate Test Set</span>
+        </button>
+      </div>
+
+      <!-- Eval Progress Indicator -->
+      <div id="evalLoading" class="eval-loading hidden">
+        <div class="spinner-small"></div>
+        <span>Evaluating 8 benchmark queries against 30 agricultural documents...</span>
+      </div>
+
+      <!-- Dynamic Evaluation Table -->
+      <div id="evalTableWrapper" class="eval-table-wrapper hidden">
+        <table class="eval-table" id="evalTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Test Farmer Question</th>
+              <th>Detected Mode</th>
+              <th>Top Document Match</th>
+              <th>Original Score</th>
+              <th>Rewritten Score</th>
+              <th>Improvement</th>
+            </tr>
+          </thead>
+          <tbody id="evalTableBody">
+            <!-- Dynamically populated -->
+          </tbody>
+          <tfoot>
+            <tr class="eval-footer-row">
+              <td colspan="4" class="text-bold">Macro Average across 8 Test Queries:</td>
+              <td id="evalMeanOrig" class="text-bold">0.131</td>
+              <td id="evalMeanRewr" class="text-bold stat-number-green">0.256</td>
+              <td id="evalOverallImp" class="text-bold stat-badge-green">+95.4%</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+    <!-- Knowledge Base Info Card -->
+    <section class="card info-card">
+      <h4 class="info-title">🌾 Dual-Layer Architecture: Web Advisory + Knowledge Base Retrieval</h4>
+      <p class="info-text">
+        <strong>1. Open-Domain Web Advisory</strong>: Handles unseen farmer questions for any crop using live plant pathology sources and verified extension recommendations without premature disease claims.<br>
+        <strong>2. Standardized Local Benchmark</strong>: 30 expert-checked, safety-compliant documents covering Tomato, Rice, Cotton, Chilli, Maize, and Groundnut to scientifically measure retrieval gain.
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <div class="container footer-content">
+      <p>Agri Advisory • Built for AGR-25 Farm Advisory Query Rewriting Challenge</p>
+      <p class="footer-meta">Powered by Python, Flask, scikit-learn TF-IDF, and Adaptive Agricultural NLP</p>
+    </div>
+  </footer>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

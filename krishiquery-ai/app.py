@@ -5,6 +5,7 @@ Part of Agri Advisory (AGR-25 Farm Advisory Query Rewriter)
 
 import os
 from flask import Flask, render_template, request, jsonify
+from flask_cors import CORS
 from dotenv import load_dotenv
 
 from retriever import AgriculturalRetriever
@@ -16,6 +17,7 @@ from web_search import AgriculturalSearchEngine
 load_dotenv()
 
 app = Flask(__name__, template_folder="templates", static_folder="static")
+CORS(app)
 
 # Initialize retriever, query rewriter, and web search engine once at startup
 retriever = AgriculturalRetriever()
